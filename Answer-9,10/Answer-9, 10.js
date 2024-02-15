@@ -21,13 +21,6 @@ const handleAllErrors = (error) => {
         throw new Error('An unexpected error occurred');
     }
 }
-
-try {
-  throw new ValidationError('TESTING');
-} catch (error) {    
-    handleAllErrors(error);
-}
-
 class ValidationError extends Error {
     constructor(message) {
         super(message);
@@ -48,4 +41,10 @@ class CustomError extends Error {
         this.name = 'CustomError';
     }
 }
+
+try {
+    throw new ValidationError('TESTING');
+  } catch (error) {    
+      handleAllErrors(error);
+  };
 

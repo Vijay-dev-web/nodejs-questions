@@ -1,5 +1,6 @@
 const xml2js = require('xml2js');
 const fs = require('fs');
+const title = "Vijay";
 try {
   const xmlContents = fs.readFileSync('Answer-1/Answer-1.xml', 'utf-8');
 
@@ -12,7 +13,7 @@ try {
     
     if(data) {
       data?.library?.book.forEach(item => {
-        item.title = "Test";
+        item.title = title;
       });
       data.library.book.forEach((item) => {
         if(item !== undefined) {
@@ -25,7 +26,7 @@ try {
         if(err) {
           process.exit(1);
         }
-        console.log('All titles updated to Test');
+        console.log(`All titles updated to ${title}`);
       })
     }
   })
