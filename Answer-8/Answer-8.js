@@ -26,7 +26,7 @@ if (cluster.isMaster) {
     });
   }
 
-  const output = `Question-8/Output_${cluster.worker.id}.json`;
+  const output = `Answer-8/Output_${cluster.worker.id}.json`;
   const data = [{
     "title": "Harry Potter and the Sorcerer&#39;s Stone",
     "author": "J.K. Rowling",

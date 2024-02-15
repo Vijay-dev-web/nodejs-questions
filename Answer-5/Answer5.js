@@ -1,7 +1,7 @@
 const xml2js = require('xml2js');
 const fs = require('fs');
 try {
-  const xmlContents = fs.readFileSync('Question-1/Question-1.xml', 'utf-8');
+  const xmlContents = fs.readFileSync('Answer-1/Answer-1.xml', 'utf-8');
 
   if(xmlContents) {
     xml2js.parseString(xmlContents, (err, data) => {
@@ -21,7 +21,7 @@ try {
       });
       const builder = new xml2js.Builder();
       const xmlDest = builder.buildObject(data);
-      fs.writeFile('Question-5/Question-5-Title-Updated.xml', xmlDest,(err) => {
+      fs.writeFile('Answer-5/Answer-5-Title-Updated.xml', xmlDest,(err) => {
         if(err) {
           process.exit(1);
         }

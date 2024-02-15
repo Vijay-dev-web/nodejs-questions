@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const handleAllErrors = (error) => {   
     const errorMsg = `${new Date().toDateString()} - ${error.stack}}`;
-    fs.appendFileSync('Question-9,10/error.log', errorMsg, (err) => {
+    fs.appendFileSync('Answer-9,10/error.log', errorMsg, (err) => {
         if (err) {
             console.error('Error writing to log file:', err)
         }

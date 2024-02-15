@@ -61,6 +61,6 @@ const data = [{
   "author": "J.R.R. Tolkien",
   "publicationYear": 1937
 }]
-const output = 'Question-7/Output.json';
+const output = 'Answer-7/Output.json';
  
 storeDataToFile(data, output);
